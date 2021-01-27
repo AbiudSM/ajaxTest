@@ -16,6 +16,28 @@
 
 		<ul class="navbar-nav ml-auto">
 
+			<!-- Home.html -->
+			<li class="nav-item active">
+				<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+			</li>
+
+
+			<!-- Not User -->
+			<li class="nav-item active">
+				<a class="nav-link" href="logIn.html">Log In<span class="sr-only">(current)</span></a>
+			</li>
+			<!-- User -->
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<b id="userDropdown"></b>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Edit Account</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Log Out</a>
+				</div>
+			</li>
+
 			<!-- Search Form -->
 			<form class="form-inline my-2 my-lg-0" method="POST">
 				<input type="search" id="searchForm" class="form-control mr-sm-2" placeholder="Search Your Task">
@@ -37,14 +59,14 @@
 				<div id="deleteAlert" class="alert alert-danger alert-dismissible fade show my-0" role="alert">
 					<b>Task deleted successfully</b>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
+						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<!-- Success Alert -->
 				<div id="successAlert" class="alert alert-success alert-dismissible fade show my-0" role="alert">
 					<b>Task added successfully</b>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
+						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<!-- Editing Alert -->
@@ -110,7 +132,9 @@
 	<!-- JS code -->
 	<script src="js/index.js"></script>
 	<!-- Bootstrap JS -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
 </body>
 </html>
