@@ -1,4 +1,7 @@
 $(function(){
+
+	// Functions
+	verifyUser();
 	
 	$('#errorAlert').hide();
 
@@ -27,5 +30,19 @@ $(function(){
 
 		$('#loginForm').trigger("reset");
 	});
+
+
+	function verifyUser(){
+		$.get('php/getUser.php', function(data) {
+			try{
+				var user = JSON.parse(data);
+				window.location.href = "index.html";
+			}
+			catch{
+				console.log('Inicia sesión');
+			}
+
+		});
+	}
 
 });

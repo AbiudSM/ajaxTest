@@ -7,6 +7,8 @@ $(function(){
 	$('#deleteAlert').hide();
 	$('#successAlert').hide();
 	$('#editingAlert').hide();
+	$('#userContainer').hide();
+	$('#nonUser').hide();
 
 
 	// Functions
@@ -95,16 +97,16 @@ $(function(){
 
 				tasks.forEach(task => {
 					template += `
-						<tr taskId = "${task.id}">
-							<td>${task.id}</td>
-							<td>
-								<a href="#" class="taskItem">${task.name}</a>
-							</td>
-							<td>${task.description}</td>
-							<td>
-								<button class="deleteTask btn btn-danger">Delete</button>
-							</td>
-						</tr>
+					<tr taskId = "${task.id}">
+					<td>${task.id}</td>
+					<td>
+					<a href="#" class="taskItem">${task.name}</a>
+					</td>
+					<td>${task.description}</td>
+					<td>
+					<button class="deleteTask btn btn-danger">Delete</button>
+					</td>
+					</tr>
 					`
 				});
 
@@ -162,6 +164,7 @@ $(function(){
 		$.get('php/getUser.php', function(data) {
 			try{
 				var user = JSON.parse(data);
+				$('#userContainer').show();
 				$('#logInNavBar').hide();
 				$('#userDropdown').html(user.name);
 				$('#userNavBar').show();
@@ -170,6 +173,8 @@ $(function(){
 				
 				$('#userNavBar').hide();
 				$('#logInNavBar').show();
+				$('#nonUser').show();
+
 
 			}
 
