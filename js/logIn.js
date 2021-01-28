@@ -13,6 +13,7 @@ $(function(){
 			try{
 				// If user is found
 				let user = JSON.parse(response);
+				window.location.href = "index.html";
 				console.log(user);
 
 			}catch{

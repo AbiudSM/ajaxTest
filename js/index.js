@@ -10,8 +10,9 @@ $(function(){
 
 
 	// Functions
+	verifyUser();
 	fetchTasks();
-	
+
 	// Search Form
 	$('#searchForm').keyup(function(event) {
 
@@ -156,4 +157,22 @@ $(function(){
 		});
 		
 	});
+
+	function verifyUser(){
+		$.get('php/getUser.php', function(data) {
+			try{
+				var user = JSON.parse(data);
+				$('#logInNavBar').hide();
+				$('#userDropdown').html(user.name);
+				$('#userNavBar').show();
+			}
+			catch{
+				
+				$('#userNavBar').hide();
+				$('#logInNavBar').show();
+
+			}
+
+		});
+	}
 })

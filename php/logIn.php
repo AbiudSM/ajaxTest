@@ -1,6 +1,7 @@
 <?php  
 
 include('connection.php');
+session_start();
 
 if (isset($_POST['name'])) {
 
@@ -13,7 +14,9 @@ if (isset($_POST['name'])) {
 	if ($user = mysqli_fetch_array($result)) {
 		$hashedPass = $user['Password'];
 		if (password_verify($pass, $hashedPass)) {
-			$userConfirm = True;
+			
+			$_SESSION['idUser'] = $user['idUsuario'];
+
 			$json = array(
 				'id' => $user['idUsuario'],
 				'name' => $user['Name'], 
