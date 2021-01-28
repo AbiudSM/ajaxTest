@@ -1,11 +1,14 @@
 <?php 
 
 	include('connection.php');
+	session_start();
+
+	$idUser = $_SESSION['idUser'];
 
 	if ($_POST['search']) {
 		$search = $_POST['search'];
 
-		$query = "SELECT * FROM tasks WHERE Name LIKE '$search%'";
+		$query = "SELECT * FROM tasks WHERE idUser = '$idUser' AND Name LIKE '$search%'";
 		$resultQuery = mysqli_query($conn,$query);
 
 		if (!$resultQuery) {
