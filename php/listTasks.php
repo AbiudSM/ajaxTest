@@ -1,8 +1,11 @@
 <?php  
 
 	include('connection.php');
+	session_start();
 
-	$query = "SELECT * FROM tasks";
+	$idUser = $_SESSION['idUser'];
+
+	$query = "SELECT * FROM tasks WHERE idUser = '$idUser'";
 	$result = mysqli_query($conn,$query);
 
 	if (!$result) {
