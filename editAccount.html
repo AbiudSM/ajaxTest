@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit account</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+
+	<!-- Navigaton bar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a href="#" class="navbar-brand">Task App</a>
+
+		<ul class="navbar-nav ml-auto">
+
+			<!-- Home.html -->
+			<li class="nav-item active">
+				<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+			</li>
+
+
+			<!-- User -->
+			<li class="nav-item dropdown" id="userNavBar">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<b id="userDropdown"></b>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="editAccount.html">Edit Account</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="php/logOut.php">Log Out</a>
+				</div>
+			</li>
+
+		</ul>
+	</nav>
+
+	<h3 class="display-4 text-center py-4 mb-4">Edit your account</h3>
+
+	<!-- Edit user information -->
+	<div class="row justify-content-center mt-4">
+		<div class="col-md-5">
+
+			<!-- Alert Messages -->
+			<!-- User Already exists -->
+			<div id="errorAlert" class="alert alert-danger alert-dismissible fade show my-0" role="alert">
+				<b id="textAlert"></b>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			
+			<!-- Body Form -->
+			<div class="card">
+				<div class="card-body">
+					<form id="editForm">
+
+						<!-- Input Name -->
+						<div class="form-group">
+							<input type="text" id="userName" placeholder="User Name" class="form-control" required>
+						</div>
+
+						<!-- Input Email -->
+						<div class="form-group pb-2">
+							<input type="text" id="userEmail" class="form-control" placeholder="Email" required>
+						</div>
+
+
+						<!-- Send Button -->
+						<button type="submit" class="btn btn-success btn-block text-center mb-5">LogIn</button>
+
+					</form>
+					
+					<!-- Change Password -->
+					<a class="d-flex justify-content-center text-decoration-none" href="#">
+						<button class="btn btn-info ">Change Password</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<!-- JS code -->
+	<script src="js/editAccount.js"></script>
+
+	<!-- Bootstrap JS -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>
