@@ -11,7 +11,9 @@ if ($_SESSION['idUser']) {
 	if ($user = mysqli_fetch_array($result)) {
 		$json = array(
 			'id' => $user['idUsuario'],
-			'name' => $user['Name'], 
+			'name' => $user['Name'],
+			'email' => $user['Email'],
+			'pass' => $user['Password']
 		);
 		$jsonString = json_encode($json);
 		echo $jsonString;
